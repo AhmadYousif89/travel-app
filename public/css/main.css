@@ -192,11 +192,11 @@ body {
   opacity: 0;
 }
 .carousel .arrow-prev, .carousel .arrow-next {
-  font-size: 3rem;
+  font-size: 4rem;
 }
 @media only screen and (min-width: 37.5em) {
   .carousel .arrow-prev, .carousel .arrow-next {
-    font-size: 5rem;
+    font-size: 6rem;
   }
 }
 .carousel .arrow-prev {
