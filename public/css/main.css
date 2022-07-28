@@ -280,7 +280,7 @@ body {
   justify-content: center;
   position: absolute;
   left: 0;
-  margin-top: 2rem;
+  margin-top: 3rem;
   width: 100%;
   font-size: 1.25rem;
 }
@@ -407,7 +407,7 @@ body {
 }
 
 .main {
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 @media only screen and (min-width: 37.5em) {
   .main {
