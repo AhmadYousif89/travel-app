@@ -1,0 +1,93 @@
+@use '../abstracts' as *;
+
+.carousel {
+	position: relative;
+	width: 100%;
+	height: 35rem;
+
+	&__container {
+		@include position();
+		inset: 0;
+		width: inherit;
+		transition: all 0.5s ease-in;
+
+		.md {
+			@include position(
+				$top: 50%,
+				$left: 50%,
+				$offset-x: -50%,
+				$offset-y: -50%
+			);
+			color: var(--primary);
+			font-size: 5rem;
+
+			@include media-size($custom600) {
+				font-size: 10rem;
+			}
+		}
+	}
+
+	&__image {
+		width: inherit;
+		height: 35rem;
+		object-fit: cover;
+	}
+
+	[id^='item'] {
+		display: none;
+	}
+	[id^='slide'] {
+		display: none;
+	}
+
+	.image-1 {
+		opacity: 1;
+		z-index: 2;
+	}
+
+	*:target ~ .image-1,
+	*:target ~ .image-2,
+	*:target ~ .image-3 {
+		opacity: 0;
+	}
+
+	#item-1:target ~ .image-1,
+	#slide-1:target ~ .image-1 {
+		opacity: 1;
+	}
+	#item-2:target ~ .image-2,
+	#item-3:target ~ .image-3,
+	#slide-2:target ~ .image-2,
+	#slide-3:target ~ .image-3 {
+		z-index: 3;
+		opacity: 1;
+	}
+
+	.arrow {
+		display: inline-block;
+		border: solid var(--primary-dark);
+		padding: 3rem;
+		width: 6rem;
+		z-index: 10;
+		opacity: 0;
+
+		&-prev,
+		&-next {
+			font-size: 3rem;
+
+			@include media-size($custom600) {
+				font-size: 5rem;
+			}
+		}
+
+		&-prev {
+			@include position($top: 50%, $left: 3rem, $offset-y: -50%);
+			color: var(--primary-dark);
+		}
+
+		&-next {
+			@include position($top: 50%, $right: 3rem, $offset-y: -50%);
+			color: var(--primary-dark);
+		}
+	}
+}

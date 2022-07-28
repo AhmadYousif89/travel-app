@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+.main {
+	margin-top: 3rem;
+	@include media-size($custom600) {
+		margin-top: 0rem;
+	}
+	@include media-size($tablet-port) {
+		@include flex();
+	}
+	@include media-size($desktop) {
+		max-width: 160rem;
+	}
+}

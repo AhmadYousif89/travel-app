@@ -1,0 +1,41 @@
+@use '../abstracts' as *;
+
+// link btn styles
+.link {
+	color: var(--off-white);
+	font-size: var(--links);
+	padding-inline: 1.5rem;
+	text-transform: uppercase;
+}
+
+// Inline btn styles
+.inline-btn {
+	@include flex($alignItems: end, $gap: 0.25rem);
+	position: relative;
+	padding-block: 1rem;
+	padding-right: 0.5rem;
+	border: 0;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: var(--links);
+	background-color: transparent;
+	cursor: pointer;
+	transition: color 0.3s;
+
+	&::after {
+		@include position($bottom: 0.25rem, $left: 50%, $offset-x: -50%);
+		content: '';
+		width: 0%;
+		border-bottom: 0px solid var(--primary);
+		transition: width 0.3s;
+	}
+
+	&:hover::after {
+		width: 80%;
+		border-width: 3px;
+	}
+	&:hover {
+		color: var(--primary);
+		animation: pulsing 1s infinite;
+	}
+}

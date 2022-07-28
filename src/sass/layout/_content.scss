@@ -1,0 +1,437 @@
+@use '../abstracts' as *;
+
+/////////////////////////////
+.overview {
+	@include flex($gap: 2rem);
+	padding: 2rem 1rem;
+	background-color: var(--off-white);
+
+	&__info {
+		@include flex($direction: column, $gap: 2rem);
+		flex: 1;
+
+		@include media-size($custom600) {
+			@include flex($direction: row, $alignItems: center);
+		}
+
+		&-heading {
+			text-transform: uppercase;
+			font-size: var(--heading-small);
+		}
+
+		&-stars {
+			.md {
+				color: var(--primary);
+				font-size: 2rem;
+			}
+		}
+
+		&-location {
+			@include media-size($tablet-land) {
+				margin-left: auto;
+			}
+		}
+	}
+
+	&__rating {
+		@include flex($direction: column, $alignItems: center);
+		align-self: flex-start;
+		background-color: var(--primary);
+		font-weight: 500;
+		border-radius: 3px;
+		text-transform: uppercase;
+		transition: opacity 0.2s;
+
+		&-average {
+			font-size: 3rem;
+			padding: 1rem;
+		}
+
+		&-likes {
+			@include flex($alignItems: center, $gap: 0.5rem);
+			font-size: 1.25rem;
+			padding-bottom: 0.5rem;
+			.md {
+				cursor: pointer;
+				color: var(--off-white);
+				transition: transform 0.1s;
+
+				&:hover {
+					color: var(--primary-light);
+				}
+				&:active {
+					transform: scale(1.1);
+					color: var(--primary-light);
+				}
+				&:focus {
+					color: var(--primary-light);
+				}
+			}
+		}
+	}
+}
+
+/////////////////////////////
+.details {
+	background-color: var(--primary);
+
+	.description {
+		color: var(--off-white);
+		border-radius: 3px;
+
+		@include media-size($custom600) {
+			padding: 5rem;
+		}
+
+		&__text {
+			font-size: 2rem;
+			text-align: center;
+			.paragraph {
+				padding-inline: 4rem;
+				margin-bottom: 4rem;
+				@include media-size($tablet-port) {
+					padding-inline: 4rem;
+					margin-bottom: 2rem;
+					max-width: 50ch;
+					margin-inline: auto;
+				}
+			}
+		}
+
+		&__features {
+			@include media-size($tablet-port) {
+				padding: 4rem;
+				width: 90%;
+				margin-inline: auto;
+			}
+		}
+		.features__list {
+			margin-bottom: 4rem;
+			@include media-size($custom600) {
+				@include flex($justifyContent: center, $gap: 5rem, $wrap: wrap);
+			}
+			@include media-size($tablet-port) {
+				margin-bottom: 2rem;
+			}
+			@include media-size($tablet-land) {
+				@include flex($gap: 8rem);
+			}
+		}
+
+		.features__item {
+			@include flex($direction: column, $alignItems: center, $gap: 2rem);
+			flex-grow: 1;
+			font-size: 2rem;
+			text-transform: uppercase;
+			font-weight: 700;
+			margin-bottom: 5rem;
+
+			.md {
+				font-size: 8rem;
+			}
+		}
+	}
+
+	/////////////////////////////
+	.gallary__images {
+		overflow: auto;
+		@include flex;
+
+		&-container {
+			position: relative;
+			width: fit-content;
+
+			.md {
+				@include position(
+					$top: 50%,
+					$left: 50%,
+					$offset-x: -50%,
+					$offset-y: -50%
+				);
+				color: var(--primary);
+				font-size: 5rem;
+			}
+		}
+
+		&-img {
+			min-width: 30rem;
+		}
+	}
+
+	//////////////////////////////
+	.testimonials {
+		@include flex($direction: column, $alignItems: center);
+		padding: 4rem;
+		background-color: var(--off-white);
+		@include media-size($tablet-port) {
+			padding: 6rem;
+		}
+
+		&__container {
+			@include media-size($tablet-port) {
+				@include flex($direction: row, $alignItems: end, $gap: 4rem);
+			}
+		}
+
+		&__box {
+			margin-bottom: 3rem;
+			text-align: center;
+			letter-spacing: 1px;
+
+			.md {
+				transform: rotate(180deg);
+				margin-bottom: 1rem;
+				@include flex;
+				font-size: 4rem;
+				color: var(--primary);
+			}
+
+			&-text {
+				font-size: 2rem;
+				margin-block: 2rem;
+				max-width: 35ch;
+			}
+
+			&-user {
+				padding-top: 1rem;
+				font-size: var(--paragraph);
+				font-weight: 700;
+				color: var(--primary);
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	///////////////////////////
+	.additional-service {
+		padding: 2rem;
+		background-color: var(--gray-dark);
+		text-align: center;
+		color: var(--off-white);
+
+		p {
+			font-size: var(--paragraph);
+			line-height: 1.6;
+			margin-block: 3rem;
+			margin-inline: auto;
+			max-width: 80%;
+		}
+	}
+
+	///////////////////////
+	.recommendation {
+		padding: 4rem 0 6rem;
+		text-align: center;
+
+		h2 {
+			font-size: var(--heading-small);
+			text-transform: uppercase;
+			margin-block: 3rem;
+			font-weight: 500;
+			letter-spacing: 1px;
+		}
+
+		&__info {
+			@include flex($direction: column, $gap: 2rem);
+		}
+
+		&__count {
+			font-size: var(--paragraph);
+			text-transform: capitalize;
+
+			span {
+				font-family: 'Pacifico', cursive;
+				font-size: 3rem;
+			}
+		}
+
+		&__friends {
+			@include flex($alignItems: center, $justifyContent: center);
+
+			& img {
+				max-width: 6rem;
+				border-radius: 50%;
+				border: 4px solid #fff;
+				cursor: pointer;
+
+				&:not(:last-child) {
+					margin-right: -2rem;
+				}
+			}
+		}
+	}
+}
+
+/////////////////////////
+.reservation {
+	padding: 2rem;
+	background-color: var(--off-white);
+
+	h2 {
+		font-size: var(--heading-small);
+		text-align: center;
+		text-transform: uppercase;
+		margin-block: 3rem;
+		font-weight: 500;
+		letter-spacing: 1px;
+	}
+
+	.form {
+		max-width: 50rem;
+		margin: 0 auto;
+		display: grid;
+
+		&__group {
+			font-size: 1.5rem;
+			color: var(--primary);
+			margin-bottom: 3.5rem;
+
+			&.input {
+				margin-bottom: 0;
+			}
+
+			&-input {
+				display: block;
+				padding: 1.75rem 1.5rem;
+				letter-spacing: 1px;
+				border: 1px solid var(--primary);
+				border-radius: 3px;
+				width: 100%;
+
+				&:focus {
+					outline: 0;
+				}
+
+				&::placeholder {
+					text-transform: uppercase;
+					color: var(--primary);
+					opacity: 1;
+				}
+
+				&:focus:invalid {
+					border: 2px solid var(--selection);
+				}
+
+				&:focus:invalid + i {
+					color: var(--selection);
+				}
+
+				&:valid {
+					border: 1px solid var(--selection-2);
+				}
+
+				&:valid + i {
+					position: relative;
+					&::after {
+						@include position($top: 0.5rem, $right: 3rem);
+						content: 'check';
+						font-size: 2rem;
+						color: var(--selection-2);
+					}
+				}
+
+				&:placeholder-shown + label {
+					opacity: 0;
+					transform: translateY(-3rem);
+				}
+			}
+
+			&-label {
+				display: inline-block;
+				margin-block: 1rem;
+				margin-left: 1.6rem;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				transition: all 0.3s;
+			}
+
+			&-date {
+				position: relative;
+				isolation: isolate;
+				font-size: 1.5rem;
+				text-transform: uppercase;
+				background-color: #fff;
+				padding: 1.25rem 1.5rem;
+				border: 1px solid var(--primary);
+				@include flex($alignItems: center, $justifyContent: space-between);
+
+				input {
+					@include position($top: 50%, $right: 0.5rem, $offset-y: -50%);
+					opacity: 0;
+					z-index: 5;
+					cursor: pointer;
+				}
+
+				.md {
+					font-size: 3rem;
+					color: var(--primary);
+					cursor: pointer;
+				}
+			}
+
+			&-select {
+				font-size: 1.5rem;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				background-color: #fff;
+				padding: 1.75rem 1.5rem;
+				border: 1px solid var(--primary);
+				color: var(--primary);
+				width: 100%;
+				cursor: pointer;
+			}
+
+			&-btn {
+				position: relative;
+				overflow: hidden;
+				outline: 1px solid var(--primary);
+				background-color: #fff;
+
+				& > *,
+				&::before {
+					font-weight: 700;
+					letter-spacing: 1px;
+					text-transform: uppercase;
+					cursor: pointer;
+				}
+
+				.form-btn {
+					color: var(--primary);
+					padding: 2rem 3rem;
+					border: 0;
+					background-color: transparent;
+					transition: all 0.25s ease;
+				}
+
+				&::before {
+					content: 'reserve now';
+					@include position();
+					@include flex($alignItems: center, $justifyContent: center);
+					background-color: var(--primary);
+					color: var(--gray-dark);
+					transform: translateX(-100%);
+					width: 100%;
+					height: 100%;
+					opacity: 1;
+					transition: all 0.25s ease;
+				}
+
+				&:hover::before,
+				&:focus::before {
+					opacity: 1;
+					transform: translateX(0);
+				}
+
+				&:hover > .form-btn,
+				&:focus > .form-btn {
+					transform: translateY(100%);
+					opacity: 0;
+				}
+			}
+
+			&:last-child {
+				justify-self: center;
+			}
+		}
+	}
+}

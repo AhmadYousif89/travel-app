@@ -1,0 +1,18 @@
+@use '../abstracts' as *;
+
+.wrapper {
+	background-color: #fff;
+
+	@include media-size($tablet-land) {
+		max-width: 110rem;
+		margin: 10rem auto;
+		border-radius: 3px;
+		@include box-shadow(
+			$offset-x: 10px,
+			$offset-y: 10px,
+			$blur: 20px,
+			$spread: 10px,
+			$color: rgba(#000, 0.15)
+		);
+	}
+}

@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@300;400;500;700;900&display=swap');
+
+/*
+  font-family: 'Pacifico', cursive;
+  font-family: 'Raleway', sans-serif;
+*/
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: var(--gray-dark);
+  min-height: 100vh;
+}

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Round|Material+Icons+Outlined"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
+
+		<title>Travel Group &mdash; Luxury hotels & resorts</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- start Header -->
+			<div class="header">
+				<div class="header-left">
+					<div class="logo">
+						<div class="logo-stars">
+							<i class="material-icons-round md">star_rate</i>
+							<i class="material-icons-round md">star_rate</i>
+							<i class="material-icons-round md">star_rate</i>
+						</div>
+						<p class="logo-text">TG</p>
+					</div>
+					<div class="search-bar">
+						<label for="search-icon" class="search-bar__btn">
+							<i class="material-icons-round md">search</i>
+						</label>
+						<input
+							id="search-icon"
+							type="text"
+							placeholder="Search hotels"
+							class="search-bar__input"
+						/>
+					</div>
+				</div>
+				<div class="header-right">
+					<div class="user-nav">
+						<!-- Status icons -->
+						<div class="user-nav__status">
+							<div class="user-nav__status--icon">
+								<i class="material-icons-outlined md">bookmark_add</i>
+								<span class="circle" data-text="5"></span>
+							</div>
+							<div class="user-nav__status--icon">
+								<i class="material-icons-outlined md">textsms</i>
+								<span class="circle" data-text="10"></span>
+							</div>
+						</div>
+
+						<!-- User icons -->
+						<div class="user-nav__user">
+							<figure class="user-nav__user--img">
+								<img src="assets/img/user-3.jpg" alt="user image" />
+							</figure>
+							<p class="user-nav__user--text">username</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end Header -->
+
+			<!-- start Main -->
+			<main class="main">
+				<!-- start Navigation -->
+				<nav class="navbar">
+					<ul class="navbar__list">
+						<li class="navbar__items navbar__items--active" data-text="home">
+							<a href="#" class="link navbar__link">
+								<i class="material-icons-outlined navbar__link-icon">home</i>
+								<span class="navbar__link-text">home</span>
+							</a>
+						</li>
+						<li class="navbar__items" data-text="features">
+							<a href="#features" class="link navbar__link">
+								<i class="material-icons-outlined navbar__link-icon">
+									king_bed
+								</i>
+								<span class="navbar__link-text">features</span>
+							</a>
+						</li>
+						<li class="navbar__items" data-text="services">
+							<a href="#services" class="link navbar__link">
+								<i class="material-icons-outlined navbar__link-icon">
+									room_service
+								</i>
+								<span class="navbar__link-text">services</span>
+							</a>
+						</li>
+						<li class="navbar__items" data-text="reservation">
+							<a href="#reservation" class="link navbar__link">
+								<i class="material-icons-outlined navbar__link-icon">style</i>
+								<span class="navbar__link-text">reservation</span>
+							</a>
+						</li>
+						<li class="navbar__items" data-text="about">
+							<a href="#about" class="link navbar__link">
+								<i class="material-icons-outlined navbar__link-icon">info</i>
+								<span class="navbar__link-text">about</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- end Navigation -->
+
+				<!-- start Main Content -->
+				<div class="content-view">
+					<!-- start Overview -->
+					<section class="overview">
+						<div class="overview__info">
+							<h2 class="overview__info-heading">house club</h2>
+							<div class="overview__info-stars">
+								<i class="material-icons-round md">star_rate</i>
+								<i class="material-icons-round md">star_rate</i>
+								<i class="material-icons-round md">star_rate</i>
+								<i class="material-icons-round md">star_rate</i>
+								<i class="material-icons-round md">star_rate</i>
+							</div>
+							<div class="overview__info-location">
+								<button class="inline-btn">
+									<i class="material-icons-outlined md">location_on</i>
+									<span>sharm el-sheikh, egypt</span>
+								</button>
+							</div>
+						</div>
+
+						<div class="overview__rating">
+							<div class="overview__rating-average">
+								<span>8.5</span>
+							</div>
+							<div class="overview__rating-likes">
+								<span>40</span>
+								<i class="material-icons-outlined md">thumb_up</i>
+							</div>
+						</div>
+					</section>
+					<!-- end Overview -->
+
+					<!-- start Content Details -->
+					<div class="details">
+						<!-- Gallary Carousel -->
+						<div class="carousel">
+							<span id="item-1"></span>
+							<span id="item-2"></span>
+							<span id="item-3"></span>
+
+							<div class="carousel__container image-1">
+								<img
+									src="assets/img/hotel-1.jpg"
+									alt="hotel image"
+									class="carousel__image"
+								/>
+								<a href="#item-3" class="arrow-prev arrow"></a>
+								<i class="material-icons-outlined arrow-prev">
+									arrow_circle_left
+								</i>
+								<a href="#item-2" class="arrow-next arrow"></a>
+								<i class="material-icons-outlined arrow-next">
+									arrow_circle_right
+								</i>
+							</div>
+
+							<div class="carousel__container image-2">
+								<img
+									src="assets/img/hotel-2.jpg"
+									alt="hotel image"
+									class="carousel__image"
+								/>
+								<a href="#item-1" class="arrow-prev arrow"></a>
+								<i class="material-icons-outlined arrow-prev">
+									arrow_circle_left
+								</i>
+								<a href="#item-3" class="arrow-next arrow"></a>
+								<i class="material-icons-outlined arrow-next">
+									arrow_circle_right
+								</i>
+							</div>
+
+							<div class="carousel__container image-3">
+								<img
+									src="assets/img/hotel-3.jpg"
+									alt="hotel image"
+									class="carousel__image"
+								/>
+								<a href="#item-2" class="arrow-prev arrow"></a>
+								<i class="material-icons-outlined arrow-prev">
+									arrow_circle_left
+								</i>
+								<a href="#item-1" class="arrow-next arrow"></a>
+								<i class="material-icons-outlined arrow-next">
+									arrow_circle_right
+								</i>
+							</div>
+						</div>
+						<!-- end Gallary -->
+
+						<section class="description" id="features">
+							<h2 class="section-heading">
+								Luxury hotel that will let you step into Celebrities' slippers
+							</h2>
+							<div class="description__text">
+								<p class="paragraph">
+									Each room at our hotel is decorated with great taste.
+									Designers’ solutions will impress you greatly. Each and every
+									trifle is here for your comfort. Room service personnel is
+									perfectly trained.
+								</p>
+							</div>
+							<!-- Features -->
+							<div class="description__features">
+								<ul class="features__list">
+									<li class="features__item">
+										<i class="material-icons md"> settings_input_antenna </i>
+										<span>reception</span>
+									</li>
+									<li class="features__item">
+										<i class="material-icons-round md">nightlife</i>
+										<span>mini bar</span>
+									</li>
+									<li class="features__item">
+										<i class="material-icons-round md">fitness_center</i>
+										<span>fitness center</span>
+									</li>
+									<li class="features__item">
+										<i class="material-icons-round md">restaurant_menu</i>
+										<span>open buffet</span>
+									</li>
+									<li class="features__item">
+										<i class="material-icons-round md">wc</i>
+										<span>housekeeping</span>
+									</li>
+									<li class="features__item">
+										<i class="material-icons-round md">wifi</i>
+										<span>wi-fi</span>
+									</li>
+									<li class="features__item">
+										<i class="material-icons-round md">ac_unit</i>
+										<span>air conditioning</span>
+									</li>
+									<li class="features__item">
+										<i class="material-icons-outlined md">lock</i>
+										<span>in-room safe</span>
+									</li>
+								</ul>
+							</div>
+						</section>
+						<!-- end Features -->
+
+						<!-- Additional Service -->
+						<div class="additional-service" id="services">
+							<h2 class="section-heading">additional services</h2>
+							<p>
+								With a prime location, there is no better place to relax yor
+								body. A spectacular view is complemented by the stunning blue
+								sea of Sharm El-Shaikh, and beautifully restored historic
+								building. <br />Relaxed welcoming service, great food and cold
+								drinks, make Hotel the perfect place to stop. Tastefully
+								appointed, air-conditioned accommodation, makes it the great
+								place to stay and enjoy your life.
+							</p>
+						</div>
+						<!-- Additional Service -->
+
+						<!-- Gallary Carousel -->
+						<div class="carousel">
+							<span id="slide-1"></span>
+							<span id="slide-2"></span>
+							<span id="slide-3"></span>
+							<div class="carousel__container image-1">
+								<i class="material-icons-outlined md">emoji_food_beverage</i>
+								<img
+									src="assets/slides/img-1.jpg"
+									alt="hotel image"
+									class="carousel__image"
+								/>
+								<a href="#slide-3" class="arrow-prev arrow"></a>
+								<i class="material-icons-outlined arrow-prev">
+									arrow_circle_left
+								</i>
+								<a href="#slide-2" class="arrow-next arrow"></a>
+								<i class="material-icons-outlined arrow-next">
+									arrow_circle_right
+								</i>
+							</div>
+
+							<div class="carousel__container image-2">
+								<i class="material-icons-outlined md">pool</i>
+								<img
+									src="assets/slides/img-2.jpg"
+									alt="hotel image"
+									class="carousel__image"
+								/>
+								<a href="#slide-1" class="arrow-prev arrow"></a>
+								<i class="material-icons-outlined arrow-prev">
+									arrow_circle_left
+								</i>
+								<a href="#slide-3" class="arrow-next arrow"></a>
+								<i class="material-icons-outlined arrow-next">
+									arrow_circle_right
+								</i>
+							</div>
+
+							<div class="carousel__container image-3">
+								<i class="material-icons-outlined md">directions_bike</i>
+								<img
+									src="assets/slides/img-3.jpg"
+									alt="hotel image"
+									class="carousel__image"
+								/>
+								<a href="#slide-2" class="arrow-prev arrow"></a>
+								<i class="material-icons-outlined arrow-prev">
+									arrow_circle_left
+								</i>
+								<a href="#slide-1" class="arrow-next arrow"></a>
+								<i class="material-icons-outlined arrow-next">
+									arrow_circle_right
+								</i>
+							</div>
+						</div>
+						<!-- end Gallary -->
+
+						<!-- Testimonials -->
+						<section class="testimonials" id="reviews">
+							<h2 class="section-heading">testimonials</h2>
+							<div class="testimonials__container">
+								<blockquote class="testimonials__box">
+									<figcaption class="testimonials__box-text">
+										<i class="material-icons md">format_quotes</i>
+										I had a marvelous time at this Hotel. From accommodation to
+										spa, massage and room service, everything was wonderfully
+										organized.
+									</figcaption>
+									<p class="testimonials__box-user">Sarah Conner</p>
+								</blockquote>
+
+								<blockquote class="testimonials__box">
+									<figcaption class="testimonials__box-text">
+										<i class="material-icons md">format_quotes</i>
+										I have to recognize your outstanding hospitality and
+										service. My room is always clean, fresh towels and linens
+										are always present.
+									</figcaption>
+									<p class="testimonials__box-user">john adams</p>
+								</blockquote>
+
+								<blockquote class="testimonials__box">
+									<figcaption class="testimonials__box-text">
+										<i class="material-icons md">format_quotes</i>
+										Hotel is an excellent choice for anybody considering hosting
+										their events there. They have top-level facilities and
+										excellent staff.
+									</figcaption>
+									<p class="testimonials__box-user">petter jakson</p>
+								</blockquote>
+							</div>
+						</section>
+						<!-- Testimonials -->
+
+						<!-- Recommendations -->
+						<section class="recommendation">
+							<h2 class="section-heading">recommendations</h2>
+							<div class="recommendation__info">
+								<p class="recommendation__count">
+									you and <span>6</span> other friends recommend this resort.
+								</p>
+								<figure class="recommendation__friends">
+									<img src="assets/img/user-3.jpg" alt="friend image" />
+									<img src="assets/img/user-5.jpg" alt="friend image" />
+									<img src="assets/img/user-2.jpg" alt="friend image" />
+									<img src="assets/img/user-1.jpg" alt="friend image" />
+									<img src="assets/img/user-4.jpg" alt="friend image" />
+									<img src="assets/img/user-6.jpg" alt="friend image" />
+								</figure>
+							</div>
+						</section>
+						<!-- Recommendations -->
+					</div>
+					<!-- end Content Details -->
+
+					<!-- start Reservation form -->
+					<section class="reservation" id="reservation">
+						<h2 class="section-heading">reservation</h2>
+						<form class="form">
+							<div class="form__group input">
+								<input
+									type="text"
+									class="form__group-input"
+									id="name"
+									placeholder="name"
+									required
+								/>
+								<label for="name" class="form__group-label">name</label>
+							</div>
+							<div class="form__group input">
+								<input
+									type="email"
+									class="form__group-input"
+									id="email"
+									placeholder="e-mail"
+									required
+								/>
+								<label for="email" class="form__group-label">e-mail</label>
+							</div>
+							<div class="form__group input">
+								<input
+									type="number"
+									class="form__group-input"
+									id="phone"
+									min="1"
+									placeholder="phone"
+									required
+								/>
+								<label for="phone" class="form__group-label">phone</label>
+							</div>
+							<div class="form__group">
+								<select
+									name="rooms"
+									id="rooms"
+									class="form__group-select"
+									required
+								>
+									<option value="" class="form__group-option">Room Type</option>
+									<option value="luxury" class="form__group-option">
+										LUXERY
+									</option>
+									<option value="premium" class="form__group-option">
+										PREMIUM
+									</option>
+									<option value="economy" class="form__group-option">
+										ECONOMY
+									</option>
+								</select>
+							</div>
+							<div class="form__group">
+								<select
+									name="person"
+									id="person"
+									class="form__group-select"
+									required
+								>
+									<option value="" class="form__group-option">Person</option>
+									<option value="1" class="form__group-option">1</option>
+									<option value="2" class="form__group-option">2</option>
+									<option value="3" class="form__group-option">3</option>
+									<option value="4" class="form__group-option">4</option>
+									<option value="5" class="form__group-option">5</option>
+								</select>
+							</div>
+							<div class="form__group form__group-date">
+								<label for="">check-in date</label>
+								<input type="date" class="form__group-input" required />
+								<i class="material-icons-round md">event_note</i>
+							</div>
+							<div class="form__group form__group-date">
+								<label for="">check-out date</label>
+								<input type="date" class="form__group-input" required />
+								<i class="material-icons-round md">event_note</i>
+							</div>
+							<div class="form__group form__group-btn">
+								<button class="form-btn">reserve now</button>
+							</div>
+						</form>
+					</section>
+					<!-- end Reservation form -->
+
+					<!-- start Footer -->
+					<footer class="footer">
+						<div class="footer__logo" id="about">
+							<div class="logo-stars">
+								<i class="material-icons-round md">star_rate</i>
+								<i class="material-icons-round md">star_rate</i>
+								<i class="material-icons-round md">star_rate</i>
+							</div>
+							<h2 class="section-heading">Travel Group</h2>
+						</div>
+
+						<div class="footer__info">
+							<div class="location">
+								<i class="material-icons-outlined md">location_on</i>
+								<p class="text">10 Spring Field 1020 Washington DC 3150-2340</p>
+							</div>
+
+							<div class="contact">
+								<i class="material-icons md">phone</i>
+								<p>505 - 1234 - 3215</p>
+							</div>
+
+							<div class="social">
+								<svg class="social__icon">
+									<use xlink:href="assets/img/sprites.svg#icon-facebook"></use>
+								</svg>
+								<svg class="social__icon">
+									<use xlink:href="assets/img/sprites.svg#icon-twitter"></use>
+								</svg>
+								<svg class="social__icon">
+									<use
+										xlink:href="assets/img/sprites.svg#icon-google-plus"
+									></use>
+								</svg>
+							</div>
+						</div>
+
+						<div class="footer__legal">
+							<p>© 2022. All Rights Reserved</p>
+						</div>
+					</footer>
+					<!-- end Footer -->
+				</div>
+				<!-- end Main Content -->
+			</main>
+			<!-- end Main -->
+		</div>
+	</body>
+</html>

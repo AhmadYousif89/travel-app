@@ -1,0 +1,169 @@
+@use '../abstracts' as *;
+
+.header {
+	@include flex($justifyContent: space-between);
+	position: relative;
+	padding-block: 2rem;
+
+	@include media-size($tablet-port) {
+		padding-inline: 2rem;
+		box-shadow: var(--shadow-light);
+	}
+
+	// Left side header
+	&-left {
+		@include media-size($custom600) {
+			@include flex($justifyContent: space-between, $gap: 4rem);
+			flex-basis: 100%;
+		}
+
+		.logo {
+			@include flex($direction: column, $alignItems: center);
+			margin-left: 1rem;
+
+			&-stars {
+				@include flex($alignItems: center);
+				.md {
+					color: var(--primary);
+					font-size: 1.5rem;
+				}
+			}
+
+			&-text {
+				line-height: 1.25;
+				font-size: 3rem;
+				font-weight: 900;
+				font-family: 'Pacifico', cursive;
+			}
+		}
+
+		.search-bar {
+			@include flex($justifyContent: center);
+			position: absolute;
+			left: 0;
+			margin-top: 2rem;
+			width: 100%;
+			font-size: 1.25rem;
+
+			@include media-size($custom600) {
+				@include flex($alignItems: center);
+				position: initial;
+				margin-top: 0;
+			}
+
+			&__input {
+				width: 80%;
+				border: none;
+				outline: none;
+				padding: 1rem 4rem;
+				border-radius: 5rem;
+				transition: all 0.3s;
+				background-color: var(--gray-dark);
+				color: var(--primary-light);
+				letter-spacing: 1px;
+
+				@include media-size($tablet-land) {
+					padding: 1.25rem 4rem;
+				}
+
+				&:focus {
+					width: 90%;
+				}
+			}
+
+			&__btn {
+				order: 1;
+				@include flex($alignItems: center);
+				color: var(--gray-light);
+				transform: translateX(-4rem);
+				cursor: pointer;
+
+				@include media-size($tablet-land) {
+					transform: scale(1.25) translateX(-4rem);
+				}
+			}
+
+			&__btn:focus + input {
+				width: 90%;
+			}
+		}
+	}
+
+	// Right side header
+	&-right {
+		@include flex();
+
+		.user-nav {
+			@include flex();
+
+			&__status {
+				@include flex($alignItems: center);
+				@include media-size($tablet-land) {
+					font-size: 1.5rem;
+				}
+
+				&--icon {
+					position: relative;
+					@include flex($alignItems: center);
+					padding: 0.5rem;
+					cursor: pointer;
+
+					.circle {
+						@include position($top: -1rem, $left: -0.5rem);
+						border-radius: 5rem;
+						width: 2.5rem;
+						height: 2.5rem;
+						font-weight: 500;
+						color: #fff;
+						background-color: var(--selection);
+
+						&::after {
+							@include flex($justifyContent: center, $alignItems: center);
+							content: attr(data-text);
+							height: 100%;
+						}
+					}
+
+					.md {
+						color: var(--primary);
+						font-size: 3rem;
+						&:hover {
+							color: var(--primary);
+							opacity: 0.75;
+						}
+					}
+				}
+			}
+
+			&__user {
+				@include flex($alignItems: center, $gap: 1rem);
+				padding: 0.5rem 1rem;
+				cursor: pointer;
+
+				&--img {
+					width: 5rem;
+					clip-path: circle(48%);
+					filter: brightness(90%);
+					transition: all 0.3s;
+
+					&:hover {
+						filter: brightness(80%);
+					}
+				}
+
+				&--text {
+					text-transform: uppercase;
+					color: var(--primary);
+					font-family: 'Pacifico', cursive;
+					@include media-size($tablet-land) {
+						font-size: 1.5rem;
+					}
+
+					&:hover {
+						opacity: 0.75;
+					}
+				}
+			}
+		}
+	}
+}

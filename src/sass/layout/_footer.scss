@@ -1,0 +1,92 @@
+@use '../abstracts' as *;
+
+.footer {
+	padding: 5rem 0;
+	background-color: var(--gray-dark);
+
+	.md {
+		color: var(--primary);
+	}
+
+	&__logo {
+		@include flex($direction: column, $alignItems: center, $gap: 1rem);
+
+		.logo-stars {
+			@include flex($alignItems: center);
+			.md {
+				font-size: 1.5rem;
+			}
+		}
+
+		.section-heading {
+			margin: 0;
+			font-family: 'Pacifico', cursive;
+			letter-spacing: 2px;
+			color: var(--off-white);
+		}
+	}
+
+	&__info {
+		@include flex($direction: column, $alignItems: center, $gap: 1rem);
+		color: var(--off-white);
+		margin-top: 4rem;
+		font-size: 1.25rem;
+
+		@include media-size($custom600) {
+			font-size: 1.75rem;
+		}
+
+		.location {
+			@include flex($alignItems: end, $gap: 1rem);
+			transition: color 0.3s;
+			cursor: pointer;
+
+			&:hover {
+				color: var(--primary);
+			}
+		}
+
+		.contact {
+			margin-top: 2rem;
+			@include flex($alignItems: center, $gap: 1rem);
+			transition: color 0.3s;
+			cursor: pointer;
+
+			&:hover {
+				color: var(--primary);
+			}
+		}
+
+		.social {
+			margin-top: 2rem;
+
+			&__icon {
+				width: 6rem;
+				height: 6rem;
+				padding: 1.5rem;
+				border: 3px solid var(--off-white);
+				border-radius: 50%;
+				fill: currentColor;
+				margin: 1rem;
+				transition: border 0.3s;
+				cursor: pointer;
+				@include media-size($custom600) {
+					width: 8rem;
+					height: 8rem;
+					padding: 1.75rem;
+				}
+
+				&:hover {
+					border-color: var(--primary);
+				}
+			}
+		}
+	}
+
+	&__legal {
+		color: var(--off-white);
+		text-align: center;
+		margin-top: 4rem;
+		font-size: 1.5rem;
+	}
+}
