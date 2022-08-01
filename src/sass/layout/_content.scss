@@ -248,14 +248,48 @@
 		&__friends {
 			@include flex($alignItems: center, $justifyContent: center);
 
-			& img {
-				max-width: 6rem;
+			&-img {
+				position: relative;
 				border-radius: 50%;
 				border: 4px solid #fff;
-				cursor: pointer;
+				transition: all 0.2s;
 
 				&:not(:last-child) {
-					margin-right: -2rem;
+					margin-right: -1.5rem;
+				}
+
+				img {
+					display: block;
+					max-width: 6rem;
+					cursor: pointer;
+					border-radius: 50%;
+					transition: all 0.2s;
+				}
+
+				&::after {
+					position: absolute;
+					pointer-events: none;
+					content: '';
+					background-color: #0000000d;
+					inset: 0;
+					opacity: 0;
+					transform: translateY(80%) scaleY(-5%);
+					transition: all 0.2s;
+				}
+
+				&:hover,
+				&:focus {
+					outline: 0;
+					border-color: var(--primary-light);
+					transform: translateY(-1rem);
+					&::after {
+						opacity: 1;
+						box-shadow: 0 0 3rem rgba(#000, 0.1);
+					}
+				}
+
+				&:hover > img {
+					transform: scale(1.05);
 				}
 			}
 		}

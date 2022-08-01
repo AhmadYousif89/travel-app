@@ -35,6 +35,7 @@
 							type="text"
 							placeholder="Search hotels"
 							class="search-bar__input"
+							tabindex="1"
 						/>
 					</div>
 				</div>
@@ -42,18 +43,18 @@
 					<div class="user-nav">
 						<!-- Status icons -->
 						<div class="user-nav__status">
-							<div class="user-nav__status--icon">
+							<div class="user-nav__status--icon" tabindex="2">
 								<i class="material-icons-outlined md">bookmark_add</i>
 								<span class="circle" data-text="5"></span>
 							</div>
-							<div class="user-nav__status--icon">
+							<div class="user-nav__status--icon" tabindex="3">
 								<i class="material-icons-outlined md">textsms</i>
 								<span class="circle" data-text="10"></span>
 							</div>
 						</div>
 
 						<!-- User icons -->
-						<div class="user-nav__user">
+						<div class="user-nav__user" tabindex="4">
 							<figure class="user-nav__user--img">
 								<img src="assets/img/user-4.jpg" alt="user image" />
 							</figure>
@@ -70,13 +71,13 @@
 				<nav class="navbar">
 					<ul class="navbar__list">
 						<li class="navbar__items navbar__items--active" data-text="home">
-							<a href="#" class="link navbar__link">
+							<a href="#" class="link navbar__link" tabindex="5">
 								<i class="material-icons-outlined navbar__link-icon">home</i>
 								<span class="navbar__link-text">home</span>
 							</a>
 						</li>
 						<li class="navbar__items" data-text="features">
-							<a href="#features" class="link navbar__link">
+							<a href="#features" class="link navbar__link" tabindex="6">
 								<i class="material-icons-outlined navbar__link-icon">
 									king_bed
 								</i>
@@ -84,7 +85,7 @@
 							</a>
 						</li>
 						<li class="navbar__items" data-text="services">
-							<a href="#services" class="link navbar__link">
+							<a href="#services" class="link navbar__link" tabindex="7">
 								<i class="material-icons-outlined navbar__link-icon">
 									room_service
 								</i>
@@ -92,13 +93,13 @@
 							</a>
 						</li>
 						<li class="navbar__items" data-text="reservation">
-							<a href="#reservation" class="link navbar__link">
+							<a href="#reservation" class="link navbar__link" tabindex="8">
 								<i class="material-icons-outlined navbar__link-icon">style</i>
 								<span class="navbar__link-text">reservation</span>
 							</a>
 						</li>
 						<li class="navbar__items" data-text="about">
-							<a href="#about" class="link navbar__link">
+							<a href="#about" class="link navbar__link" tabindex="9">
 								<i class="material-icons-outlined navbar__link-icon">info</i>
 								<span class="navbar__link-text">about</span>
 							</a>
@@ -154,11 +155,11 @@
 									alt="hotel image"
 									class="carousel__image"
 								/>
-								<a href="#item-3" class="arrow-prev arrow"></a>
+								<a href="#item-3" class="arrow-prev arrow" tabindex="10"></a>
 								<i class="material-icons-outlined arrow-prev">
 									arrow_circle_left
 								</i>
-								<a href="#item-2" class="arrow-next arrow"></a>
+								<a href="#item-2" class="arrow-next arrow" tabindex="11"></a>
 								<i class="material-icons-outlined arrow-next">
 									arrow_circle_right
 								</i>
@@ -277,11 +278,11 @@
 									alt="hotel image"
 									class="carousel__image"
 								/>
-								<a href="#slide-3" class="arrow-prev arrow"></a>
+								<a href="#slide-3" class="arrow-prev arrow" tabindex="12"></a>
 								<i class="material-icons-outlined arrow-prev">
 									arrow_circle_left
 								</i>
-								<a href="#slide-2" class="arrow-next arrow"></a>
+								<a href="#slide-2" class="arrow-next arrow" tabindex="13"></a>
 								<i class="material-icons-outlined arrow-next">
 									arrow_circle_right
 								</i>
@@ -368,12 +369,24 @@
 									you and <span>6</span> other friends recommend this resort.
 								</p>
 								<figure class="recommendation__friends">
-									<img src="assets/img/user-3.jpg" alt="friend image" />
-									<img src="assets/img/user-5.jpg" alt="friend image" />
-									<img src="assets/img/user-2.jpg" alt="friend image" />
-									<img src="assets/img/user-1.jpg" alt="friend image" />
-									<img src="assets/img/user-4.jpg" alt="friend image" />
-									<img src="assets/img/user-6.jpg" alt="friend image" />
+									<div class="recommendation__friends-img" tabindex="14">
+										<img src="assets/img/user-3.jpg" alt="friend image" />
+									</div>
+									<div class="recommendation__friends-img" tabindex="15">
+										<img src="assets/img/user-5.jpg" alt="friend image" />
+									</div>
+									<div class="recommendation__friends-img" tabindex="16">
+										<img src="assets/img/user-2.jpg" alt="friend image" />
+									</div>
+									<div class="recommendation__friends-img" tabindex="17">
+										<img src="assets/img/user-1.jpg" alt="friend image" />
+									</div>
+									<div class="recommendation__friends-img" tabindex="18">
+										<img src="assets/img/user-4.jpg" alt="friend image" />
+									</div>
+									<div class="recommendation__friends-img" tabindex="19">
+										<img src="assets/img/user-6.jpg" alt="friend image" />
+									</div>
 								</figure>
 							</div>
 						</section>

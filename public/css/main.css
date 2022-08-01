@@ -791,14 +791,43 @@ body {
   justify-content: center;
   align-items: center;
 }
-.details .recommendation__friends img {
-  max-width: 6rem;
+.details .recommendation__friends-img {
+  position: relative;
   border-radius: 50%;
   border: 4px solid #fff;
-  cursor: pointer;
+  transition: all 0.2s;
 }
-.details .recommendation__friends img:not(:last-child) {
-  margin-right: -2rem;
+.details .recommendation__friends-img:not(:last-child) {
+  margin-right: -1.5rem;
+}
+.details .recommendation__friends-img img {
+  display: block;
+  max-width: 6rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+.details .recommendation__friends-img::after {
+  position: absolute;
+  pointer-events: none;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.0509803922);
+  inset: 0;
+  opacity: 0;
+  transform: translateY(80%) scaleY(-5%);
+  transition: all 0.2s;
+}
+.details .recommendation__friends-img:hover, .details .recommendation__friends-img:focus {
+  outline: 0;
+  border-color: var(--primary-light);
+  transform: translateY(-1rem);
+}
+.details .recommendation__friends-img:hover::after, .details .recommendation__friends-img:focus::after {
+  opacity: 1;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.1);
+}
+.details .recommendation__friends-img:hover > img {
+  transform: scale(1.05);
 }
 
 .reservation {
